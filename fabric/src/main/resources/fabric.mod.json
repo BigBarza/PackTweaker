@@ -16,10 +16,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.killerqu.fabric.ExampleModFabric"
+      "com.killerqu.fabric.PackTweakerFabric"
     ],
     "client": [
-      "com.killerqu.fabric.client.ExampleModFabricClient"
+      "com.killerqu.fabric.client.PackTweakerFabricClient"
     ]
   },
   "mixins": [
