@@ -1,5 +1,6 @@
 package com.killerqu.forge;
 
+import com.killerqu.packtweaker.config.ClientConfig;
 import com.killerqu.packtweaker.config.CommonConfig;
 import dev.architectury.platform.forge.EventBuses;
 import net.minecraftforge.fml.common.Mod;
@@ -15,6 +16,7 @@ public final class PackTweakerForge {
         // Submit our event bus to let Architectury API register our content on the right time.
         EventBuses.registerModEventBus(PackTweaker.MOD_ID, FMLJavaModLoadingContext.get().getModEventBus());
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, CommonConfig.SPEC);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, ClientConfig.SPEC);
 
         // Run our common setup.
         PackTweaker.init();

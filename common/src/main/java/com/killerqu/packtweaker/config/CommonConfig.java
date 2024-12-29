@@ -1,6 +1,7 @@
 package com.killerqu.packtweaker.config;
 
 import net.minecraftforge.common.ForgeConfigSpec;
+import org.apache.commons.compress.utils.Lists;
 
 import java.util.List;
 
@@ -16,7 +17,7 @@ public class CommonConfig {
         BUILDER.push("PackTweaker config");
 
         DIMENSION_BLACKLIST = BUILDER.comment("Players won't be able to travel to dimensions listed here.")
-                .define("Dimension Blacklist", List.of());
+                .defineList("Dimension Blacklist", Lists.newArrayList(),s -> s instanceof String);
         ENABLE_SLEEP = BUILDER.comment("If false, player cannot sleep. Setting respawn point will still work.")
                 .define("Enable Sleep", true);
         ENABLE_HUNGER = BUILDER.comment("If false, player always has max hunger and saturation. Warning: this will make natural regeneration pretty OP.")

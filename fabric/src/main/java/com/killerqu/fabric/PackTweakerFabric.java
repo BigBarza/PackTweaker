@@ -1,5 +1,6 @@
 package com.killerqu.fabric;
 
+import com.killerqu.packtweaker.config.ClientConfig;
 import com.killerqu.packtweaker.config.CommonConfig;
 import net.fabricmc.api.ModInitializer;
 
@@ -17,5 +18,6 @@ public final class PackTweakerFabric implements ModInitializer {
         // Run our common setup.
         PackTweaker.init();
         ModLoadingContext.registerConfig(PackTweaker.MOD_ID, ModConfig.Type.COMMON, CommonConfig.SPEC);
+        ModLoadingContext.registerConfig(PackTweaker.MOD_ID, ModConfig.Type.CLIENT, ClientConfig.SPEC);
     }
 }
