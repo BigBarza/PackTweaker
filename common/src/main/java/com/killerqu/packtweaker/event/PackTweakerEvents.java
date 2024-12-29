@@ -24,7 +24,7 @@ public class PackTweakerEvents {
                 point = SpawnLocating.findServerSpawnPoint(player.getServer().getWorld(worldFrom), new ChunkPos(0,0));
                 player.teleport(player.getServer().getWorld(player.getSpawnPointDimension()), point.getX(), point.getY(), point.getZ(), player.getYaw(), player.getPitch());
             }
-            player.sendMessageToClient(Text.of("This world has rejected you. You have been teleported back."), false);
+            player.sendMessageToClient(Text.translatable("info.dimension_fail"), false);
         }
     }
 }
