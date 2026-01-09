@@ -1,7 +1,6 @@
 package com.killerqu.packtweaker.mixin;
 
 import com.killerqu.packtweaker.config.CommonConfig;
-import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraftforge.client.gui.overlay.ForgeGui;
 import org.spongepowered.asm.mixin.Mixin;
