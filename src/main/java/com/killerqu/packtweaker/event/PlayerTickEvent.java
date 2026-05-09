@@ -1,12 +1,13 @@
 package com.killerqu.packtweaker.event;
 
+import com.killerqu.packtweaker.PackTweaker;
 import com.killerqu.packtweaker.config.CommonConfig;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(Dist.DEDICATED_SERVER)
+@Mod.EventBusSubscriber(modid = PackTweaker.MODID)
 public class PlayerTickEvent {
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
